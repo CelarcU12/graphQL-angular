@@ -1,0 +1,25 @@
+<p>
+  graph-ql works!
+</p>
+{{views
+   | json}}
+
+<li *ngFor="let view of view2">
+  {{view.name}}
+</li>
+
+<h3> Ime in ID views-a </h3>
+<li *ngFor="let view of view2"
+  (click)="onViewClick(view)">
+    {{view.name}}, {{view.id}}
+</li>
+  
+<li *ngIf="clickedView">
+  <h3>Kliknjena postaja: {{clickedView}}</h3>
+</li>
+
+<li *ngFor="let position of clickedPositionSet"
+(click)="onStationClick(graph)" >
+  {{position.id}}
+  <app-one-view [station] = "position" [id1] = "id"></app-one-view>
+</li>

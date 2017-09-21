@@ -1,0 +1,28 @@
+<h1>
+    {{view?.name}}     {{view?.id}}
+</h1>
+
+<ul>
+<div *ngFor="let pos of view?.graph_set">
+    <li>{{pos.partab}} ,
+  {{pos.plot_code}} ,
+  {{pos.graph_type.description}},
+  {{pos.line.description}} ,
+  {{pos.color.description}}
+</li>
+</div>
+  
+</ul>
+
+
+<table style="width:30%">
+  <tr>
+    <th> Datum </th>
+    <th> Vrednost </th>
+  </tr>
+  <tr *ngFor="let vrednost of data">
+    
+      <td> {{vrednost?.date}}</td>
+      <td> {{vrednost?.value}}</td>
+    </tr>
+</table>

@@ -1,0 +1,11 @@
+<ol>
+<li *ngFor="let graph of station.graph_set"
+(click)="onStationClick()">
+ {{graph.partab}},
+ {{graph.plot_code}}
+ {{graph.graph_type.description | json}} ,
+ {{graph.line.description | json}} ,
+ {{graph.color.description | json}}
+</li>
+</ol>
+<!-- {{stationData | json}} -->
